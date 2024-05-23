@@ -8,6 +8,14 @@
         text-align: center;
 }
 
+.section-content-rumus{
+    background-color: white;
+    color: black;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
 .section-content>h3{
     margin: 0;
 }
@@ -44,7 +52,21 @@ form>button{
     border-radius: 18px;
 }
 
+.button-responsive>button{
+    padding: 18px;
+    background-color: bisque;
+    border: 1px solid coral;
+    border-radius: 18px;
+}
+
 #reset-btn {
     background-color: cadetblue;
     color: white;
+}
+
+@media only screen and (max-width: 480px) {
+    .button-responsive{
+        flex-direction: column;
+    }
+    
 }

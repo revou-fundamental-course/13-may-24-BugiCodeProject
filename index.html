@@ -22,10 +22,10 @@
             <h3>Segitiga</h3>
         </div>
 
-        <button type="button" id="switch-keliling"> <U>Switch Keliling Segitiga</U></button>
+        <button type="button" id="switch-keliling" onclick="myFunction()"> <U>Switch Keliling Segitiga</U></button>
     </section>
-
-    <section>
+    
+    <section id="Konten_LuasSegitiga">
         <!-- Konten Luas Segitiga -->
         <section>
             <div class="section-content">
@@ -38,6 +38,20 @@
             </div>
     
             <P>Rumus Luas Segitiga yaitu :</P>
+            
+            <div class="section-content-rumus">
+                <h3><bold>L=1/2 x a x t</bold></h3>
+            </div>
+
+            <P>Dimana : 
+                <br>
+                L = Luas
+                <br>
+                a = Panjang Alas
+                <br>
+                t = Tinggi
+            </P>
+
         </section>
 
         <!-- Pemisah Konten -->
@@ -52,21 +66,94 @@
             <form>
                 <section>
                     <div>
-                        <label>Alas:</label><input/>
+                        <label>Alas:</label><input id="alas-input" type="number"/>
                     </div>
                     <div>
-                        <label>Tinggi:</label><input/>
+                        <label>Tinggi:</label><input id="tinggi-input" type="number"/>
                     </div>
                 </section>
 
-                <p>Diketahui: Loremipsum...</p>
+                <br>
+                <div id="rumusLuas"></div>
+                <div id="flowLuas"></div>
+                <div id="ResultLuas"></div>
+                <br>
 
-                <button type="button">Hitung</button>
-                <button type="button" id="reset-btn">Reset</button>
+            <div class="button-responsive" style="display: flex;">
+                <button type="button" onclick="validationLuas()" id="calculate-btn">Hitung</button>
+                <button type="button" onclick="resetluas()" id="reset-btn">Reset</button>
+            </div>
+
+            </form>
+        </section>
+    </section>
+
+    <section id="Konten_KelilingSegitiga">
+           <!-- Konten Luas Segitiga -->
+           <section>
+            <div class="section-content">
+                <h2>Keliling Segitiga</h2>
+            </div>
+    
+            <div class="formula-img">
+                <img src="https://cdn-brilio-net.akamaized.net/real/2023/10/16/2130004/rumus-luas-segitiga-sama-sisi.png">
+                
+            </div>
+    
+            <P>Rumus Keliling Segitiga yaitu :</P>
+
+            <div class="section-content-rumus">
+                <h3><bold>K = S1 + S2 + S3</bold></h3>
+            </div>
+
+            <P>Dimana : 
+                <br>
+                K = Keliling
+                <br>
+                S1 = Sisi A
+                <br>
+                S2 = Sisi B
+                <br>
+                S3 = Sisi C
+            </P>
+        </section>
+
+        <!-- Pemisah Konten -->
+        <hr/>
+
+        <!-- Konten Bawah Luas Segitiga -->
+        <section>
+            <header>
+                <h2>Hitung Keliling Segitiga</h2>
+            </header>
+
+            <form>
+                <section>
+                    <div>
+                        <label>Sisi A:</label><input id="SisiA-input" type="number"/>
+                    </div>
+                    <div>
+                        <label>Sisi B:</label><input id="SisiB-input" type="number"/>
+                    </div>
+                    <div>
+                        <label>Sisi C:</label><input id="SisiC-input" type="number"/>
+                    </div>
+                </section>
+                <br>
+                <div id="rumus"></div>
+                <div id="flow"></div>
+                <div id="Result"></div>
+                <br>
+                <div class="button-responsive" style="display: flex;">
+                    <button type="button" onclick="validationHitungKeliling();" id="calculate-btn">Hitung</button>
+                    <button type="button" onclick="resetkeliling();" id="reset-btn">Reset</button>
+                </div>
 
             </form>
         </section>
     </section>
 
 </body>
+<script src="js/script.js"></script>
+
 </html>
